@@ -24,7 +24,7 @@ const generateToken = async (messaging) => {
 
     if (permission === "granted") {
       const token = await getToken(messaging, {
-        vapidKey: NEXT_PUBLIC_FIREBASE_VAPID_KEY,
+        vapidKey: process.env.NEXT_PUBLIC_FIREBASE_VAPID_KEY,
       });
     }
   } catch (error) {}
